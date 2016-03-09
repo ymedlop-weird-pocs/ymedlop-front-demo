@@ -19,8 +19,8 @@ class HomeController {
 		vm.apiProvider = apiProvider;
 		vm.items = [];
 
-		vm.lng = 33.453145;
-		vm.lat = -3.7035555000000002;
+		vm.lng = -3.712191999999959;
+		vm.lat = 40.4777782;
 		vm.radius = 100;
 		vm.url = "http://ymedlop-db-memory-rest-bbva-sandbox.openshift-app-os1.lospaaseros.com";
 	}
