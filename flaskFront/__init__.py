@@ -12,12 +12,12 @@ def send_js(path):
     return send_from_directory('templates/flaskFront', path)
 
 
-@app.route( '/' )
+@app.route('/')
 def index():
     return render_template('index.html')
 
 
-@app.route( '/s/near' )
+@app.route('/s/near')
 def near():
 
     lng = request.args.get('lng', None)
@@ -26,7 +26,7 @@ def near():
     url = request.args.get('url', "http://ymedlop-memory-db-demo.cloud-foundry.lospaaseros.com")
 
     url += "/near?radius=" + radius + "&lng=" + lng + "&lat=" + lat
-    r, content = httplib2.Http( timeout=60 ).request(url)
+    r, content = httplib2.Http(timeout=60).request(url)
 
     resp = make_response(content, 200)
     resp.headers['Content-Type'] = 'application/json'
