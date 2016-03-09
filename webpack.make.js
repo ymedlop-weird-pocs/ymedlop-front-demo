@@ -28,7 +28,7 @@ module.exports = function makeWebpackConfig( options ) {
 		},
 		output : {
 			// Absolute output directory
-			path : __dirname + '/flaskFront/application/templates/flaskFront',
+			path : __dirname + '/flaskFront/templates/flaskFront',
 
 			// Output path from the view of the page
 			publicPath : 'flaskFront/',
