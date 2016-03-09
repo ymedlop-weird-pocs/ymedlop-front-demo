@@ -20,9 +20,9 @@ class HomeController {
 		vm.items = [];
 
 		vm.lng = 33.453145;
-		vm.lat = 42.3251855;
+		vm.lat = -3.7035555000000002;
 		vm.radius = 100;
-		vm.url = "http://ymedlop-memory-db-demo.cloud-foundry.lospaaseros.com";
+		vm.url = "http://ymedlop-db-memory-rest-bbva-sandbox.openshift-app-os1.lospaaseros.com";
 	}
 
 	get() {
