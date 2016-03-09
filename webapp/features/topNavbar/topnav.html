@@ -1,0 +1,15 @@
+<nav class="navbar navbar-default">
+	<div class="container">
+		<div class="ffa app-title" ng-click="topnav.goToHomePage()">
+			<img class="ffa bbva-logo" src="../../assets/images/logo_light.png"/>
+			<h1>{{ 'NAVBAR.appTitle' | translate }}</h1>
+		</div>
+		<div class="ffa navigation">
+			<div class="ffa lang-selector">
+				<language-selector></language-selector>
+			</div>
+		</div>
+	</div>
+	<global-loading></global-loading>
+</nav>
+<div app-view-segment="1"></div>

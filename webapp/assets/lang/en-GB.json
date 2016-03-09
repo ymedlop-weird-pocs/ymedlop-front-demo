@@ -1,0 +1,11 @@
+{
+	"LANGUAGES": {
+		"en-GB": "English",
+		"en-US": "American",
+		"es-ES": "Spanish",
+		"pt-PT": "Portuguese"
+	},
+	"NAVBAR": {
+		"appTitle": "Offices"
+	}
+}

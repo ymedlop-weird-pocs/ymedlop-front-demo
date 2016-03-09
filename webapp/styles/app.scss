@@ -1,0 +1,182 @@
+/**
+ * BBVA GCP Team < gcp.team@bbva.com >
+ * Date: 10/01/16
+ * Time: 15:24
+ */
+* {
+  font-family: bbvaLightFont, bbvaDefaultFont, sans-serif;
+}
+
+.ffa {
+  &.valid {
+	border-color: #6ed117 !important;
+	background-color: #dbf3c5 !important;
+  }
+  &.invalid {
+	border-color: #d70000 !important;
+	background-color: #f5dddd !important;
+  }
+
+  &.invalid::placeholder {
+	color: black;
+  }
+
+  &.search-block {
+	height: 50px;
+
+	.ffa {
+	  &.input-group {
+		float: right;
+		@media(min-width: 310px) {
+		  width: 300px;
+		}
+	  }
+	}
+  }
+
+  &.search-box {
+	display: block;
+  }
+
+  &.nav {
+	&.navbar-nav {
+	  display: inline-block;
+	  margin: 15px 5px 0 5px;
+	}
+  }
+  &.navbar-elmnt {
+	cursor: pointer;
+  }
+
+  &.navigation {
+	float: right;
+  }
+
+  &.bbva-logo {
+	height: 40px;
+  }
+  &.app-title {
+	display: inline-block;
+	cursor: pointer;
+	color: $bbvaBlue1;
+	float: left;
+
+	h1 {
+	  display: inline-block;
+	  vertical-align: middle;
+	  margin: 10px 0px 5px 5px;
+	}
+  }
+
+  &.main-container {
+
+	max-width: 1024px;
+	margin: 5px 5px;
+
+	@media(min-width: 1024px) {
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+  }
+
+  &.list-group-item {
+	display: inline-block;
+	height: 120px;
+	vertical-align: middle;
+
+	margin: 5px;
+
+	margin-right: 8%;
+	margin-left: 8%;
+	width: 84%;
+
+	@media(min-width: 600px) {
+	  margin-right: 4%;
+	  margin-left: 4%;
+	  width: 42%;
+	}
+
+	@media(min-width: 800px) {
+	  margin-left: 2.5%;
+	  margin-right: 2.5%;
+	  width: 28%;
+	}
+	@media(min-width: 1000px) {
+	  margin-right: 2%;
+	  margin-left: 2%;
+	  width: 21%;
+	}
+  }
+
+  &.api-longName {
+	font-family: bbvaDefaultFont, sans-serif;
+	font-size: initial;
+	color: $bbvaBlue1;
+  }
+
+  &.api-url {
+	color: $bbvaBlue3;
+  }
+
+  &.lang-selector {
+	margin: 10px 0px;
+	display: inline-block;
+  }
+
+  &.panel-default {
+	.ffa {
+	  &.panel-heading {
+		font-family: bbvaDefaultFont, sans-serif;
+		color: white;
+		background-color: $bbvaBlue1;
+		.ffa {
+		  &.icon-group {
+			float: right;
+		  }
+		}
+	  }
+	  &.glyphicon {
+		cursor: pointer;
+	  }
+	}
+  }
+
+  &.input-group {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 100%;
+  }
+
+  &.input-group-addon {
+	background-color: $bbvaGray3;
+	width: 185px;
+	//color: white;
+  }
+
+  &.btn {
+	&.btn-default {
+	  font-family: bbvaDefaultFont, sans-serif;
+	  float: right;
+	  background-color: $bbvaBlue1;
+	  color: white;
+
+	}
+	&.btn-default:active {
+	  background-color: $bbvaBlue3;
+	}
+  }
+}
+
+.api-name {
+  color: $bbvaBlue2;
+}
+
+.response {
+  width: 65%;
+}
+
+.swagger-ui {
+  .api-version {
+	color: $bbvaBlue2;
+  }
+}

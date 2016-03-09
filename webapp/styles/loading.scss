@@ -1,0 +1,31 @@
+
+.ui_activity_indicator .load_bg {
+  background: white;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1222;
+}
+
+.ui_activity_indicator .load_content {
+  position: fixed;
+  z-index: 12225;
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.ui_activity_indicator .spinner {
+  width: 16px;
+  height: 11px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: 9px;
+  background: url('../assets/images/loading.gif');
+}
+
+
