@@ -6,9 +6,11 @@ from flask import Flask, render_template, make_response, request
 
 app = Flask( __name__ )
 
+
 @app.route( '/' )
 def index():
     return render_template('index.html')
+
 
 @app.route( '/s/near' )
 def near():
