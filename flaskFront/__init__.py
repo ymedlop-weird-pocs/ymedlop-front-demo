@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 import httplib2
+import logging
 from flask import Flask, render_template, make_response, request
 
 app = Flask( __name__ )
