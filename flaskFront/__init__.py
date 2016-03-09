@@ -6,9 +6,11 @@ from flask import Flask, render_template, make_response, request, send_from_dire
 
 app = Flask( __name__ , static_url_path='')
 
+
 @app.route('flaskFront/<path:path>')
 def send_js(path):
     return send_from_directory('flaskFront/templates/flaskFront', path)
+
 
 @app.route( '/' )
 def index():

@@ -17,7 +17,7 @@ RUN curl https://deb.nodesource.com/node_0.12/pool/main/n/nodejs/nodejs_0.12.4-1
 ADD . /app/front
 
 WORKDIR /app/front/
-RUN npm install && npm run build
+RUN npm run build
 
 WORKDIR /app/front/flaskFront/
 RUN pip install -U -r requirements.txt
