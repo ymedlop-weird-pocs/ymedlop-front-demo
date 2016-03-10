@@ -17,7 +17,7 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/s/near')
+@app.route('/near')
 def near():
 
     lng = request.args.get('lng', None)
