@@ -38,7 +38,7 @@ class RestClient {
 
 		switch ( method ) {
 			case "GET":
-				this.$http.get( url, headers )
+				this.$http.get( url, {withCredentials : true}, headers )
 					.then( ( data ) => {
 
 						if ( data.status === 200 ) {

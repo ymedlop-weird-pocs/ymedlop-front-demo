@@ -22,7 +22,7 @@ class ApiProvider {
 		let vm = this;
 		let deferred = vm.$q.defer();
 
-		vm.restClient.doGet( url + "?radius=" + radius + "&lng=" + lng + "&lat=" + lat)
+		vm.restClient.doGet( url + "/near?radius=" + radius + "&lng=" + lng + "&lat=" + lat)
 			.then(
 				function ( resp ) {
 
