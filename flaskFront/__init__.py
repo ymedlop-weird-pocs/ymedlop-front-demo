@@ -22,10 +22,10 @@ def near():
 
     lng = request.args.get('lng', None)
     lat = request.args.get('lat', None)
-    radius = request.args.get('radius', None)
+    distance = request.args.get('distance', None)
     url = request.args.get('url', "ymedlop-db-memory-rest.bbva-sandbox.svc")
 
-    url += "/near?radius=" + radius + "&lng=" + lng + "&lat=" + lat
+    url += "/near?distance=" + distance + "&lng=" + lng + "&lat=" + lat
     r, content = httplib2.Http(timeout=60).request(url)
 
     resp = make_response(content, 200)

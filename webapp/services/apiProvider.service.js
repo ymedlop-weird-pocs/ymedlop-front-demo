@@ -17,12 +17,12 @@ class ApiProvider {
 		this.restClient = restClient;
 	}
 
-	getNear(lng, lat, radius, url) {
+	getNear(lng, lat, distance, url) {
 
 		let vm = this;
 		let deferred = vm.$q.defer();
 
-		vm.restClient.doGet("/near?radius=" + radius + "&lng=" + lng + "&lat=" + lat + "&url=" + url)
+		vm.restClient.doGet("/near?distance=" + distance + "&lng=" + lng + "&lat=" + lat + "&url=" + url)
 			.then(
 				function ( resp ) {
 

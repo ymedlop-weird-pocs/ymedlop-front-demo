@@ -21,7 +21,7 @@ class HomeController {
 
 		vm.lng = -3.712191999999959;
 		vm.lat = 40.4777782;
-		vm.radius = 100;
+		vm.distance = 100;
 		vm.url = "ymedlop-db-memory-rest.bbva-sandbox.svc";
 	}
 
@@ -29,7 +29,7 @@ class HomeController {
 
 		let vm = this;
 
-		vm.apiProvider.getNear(vm.lng, vm.lat, vm.radius, vm.url)
+		vm.apiProvider.getNear(vm.lng, vm.lat, vm.distance, vm.url)
 			.then(
 				( data )=> {
 					vm.items = data.list;
