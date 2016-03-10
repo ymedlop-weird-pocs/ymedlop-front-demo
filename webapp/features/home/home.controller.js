@@ -22,7 +22,7 @@ class HomeController {
 		vm.lng = -3.712191999999959;
 		vm.lat = 40.4777782;
 		vm.radius = 100;
-		vm.url = "http://ymedlop-db-memory-rest-bbva-sandbox.openshift-app-os1.lospaaseros.com";
+		vm.url = "ymedlop-db-memory-rest.bbva-sandbox.svc";
 	}
 
 	get() {
