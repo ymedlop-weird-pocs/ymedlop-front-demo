@@ -14,12 +14,16 @@ RUN curl https://deb.nodesource.com/node_0.12/pool/main/n/nodejs/nodejs_0.12.4-1
  && dpkg -i node.deb \
  && rm node.deb
 
-ADD . /app/front
+ADD package.json /tmp/package.json
+RUN cd /tmp && npm install
+RUN mkdir -p /opt/app && cp -a /tmp/node_modules /opt/app/
 
-WORKDIR /app/front/
-RUN npm install && npm run build
+ADD . /opt/app/
 
-WORKDIR /app/front/flaskFront/
+WORKDIR /opt/app/
+RUN npm run build
+
+WORKDIR /opt/app/flaskFront/
 RUN pip install -U -r requirements.txt
 
 EXPOSE 8080
