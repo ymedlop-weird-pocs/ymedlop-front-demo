@@ -10,11 +10,13 @@
   "dependencies": {
     "angular": "^1.4.7",
     "angular-animate": "^1.5.0",
+    "angular-google-maps": "^2.3.2",
     "angular-elastic": "^2.5.0",
     "angular-moment": "~1.0.0-beta.2",
     "angular-route": "^1.4.8",
     "angular-route-segment": "^1.5.0",
     "angular-sanitize": "^1.4.8",
+    "angular-simple-logger": "^0.1.7",
     "angular-toastr": "~ 1.5.0",
     "angular-translate": "^2.8.1",
     "angular-ui-bootstrap": "^0.14.3",

@@ -2,6 +2,9 @@ BBVA OFFICES
  =============
 
  docker build -t ymedlop/ymedlop-front-demo .
- docker run -p 8080:8080 --name offices ymedlop/ymedlop-front-demo
+ docker run -p 8080:8080 --name front-offices ymedlop/ymedlop-front-demo
 
- oc new-app --strategy=docker
+
+oc login --insecure-skip-tls-verify=true
+oc project bbva-offices
+oc new-app --strategy=docker https://github.com/ymedlop/ymedlop-front-demo.git

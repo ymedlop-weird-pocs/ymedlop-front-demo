@@ -12,6 +12,7 @@ import "./app.run";
 
 import appValues from "./configuration/app.values.js";
 
+import appMaps from "./configuration/app.maps.config.js";
 import appRoutes from "./configuration/app.routes.config.js";
 import appTranslations from "./configuration/app.translate.config.js";
 
@@ -25,6 +26,7 @@ import "./features/home/home.controller";
 import "./features/topNavbar/topnav.controller";
 
 angular.module( appValues.appName )
+	.config( appMaps )
 	.config( appRoutes )
 	.config( appTranslations );
 

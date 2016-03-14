@@ -8,10 +8,10 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4">
-				Latitude: <input type="text" placeholder="Latitude" ng-model="home.lat">
+				Latitude: <input type="text" placeholder="Latitude" ng-model="home.latitude">
 			</div>
 			<div class="col-md-4">
-				Longitude: <input type="text" placeholder="Longitude" ng-model="home.lng">
+				Longitude: <input type="text" placeholder="Longitude" ng-model="home.longitude">
 			</div>
 			<div class="col-md-3">
 				Distance: <input type="text" placeholder="Distance" ng-model="home.distance">
@@ -24,7 +24,37 @@
 
 	<uib-tabset>
 
-		<uib-tab index="0" heading="Listado">
+		<uib-tab index="0" heading="Mapa">
+
+			<div class="row">
+
+				<ui-gmap-google-map
+						class="col-md-12"
+						center="home.map.center"
+						zoom="home.map.zoom"
+						dragging="home.map.dragging"
+						draggable="true"
+						control="home.map.control"
+				>
+
+					<ui-gmap-markers
+							models="home.items"
+							coords="'self'"
+							icon="'icon'"
+							fit="true"
+					>
+                        <ui-gmap-windows show="'show'">
+                            <div ng-non-bindable>{{address}}</div>
+                        </ui-gmap-windows>
+
+					</ui-gmap-markers>
+
+
+			</div>
+
+		</uib-tab>
+
+		<uib-tab index="1" heading="Listado">
 
 			<div class='search-result-titles col-md-12'>
 				<p class='col-md-3'>
@@ -33,20 +63,26 @@
 				<p class='col-md-5'>
 					Address
 				</p>
-				<p class='col-md-3'>
-					Location
+				<p class='col-md-1'>
+					Latitude
+				</p>
+				<p class='col-md-1'>
+					Longitude
 				</p>
 			</div>
 
 			<div class='search-result-row col-md-12' ng-repeat='(key, value) in home.items track by $index'>
-				<p class='col-md-3'>
+				<p class='col-md-4'>
 					{{ value.desc }}
 				</p>
 				<p class='col-md-5'>
 					{{ value.address }}
 				</p>
-				<p class='col-md-3'>
-					{{ value.location }}
+				<p class='col-md-1'>
+					{{ value.lat }}
+				</p>
+				<p class='col-md-1'>
+					{{ value.lng }}
 				</p>
 			</div>
 

@@ -7,7 +7,7 @@ import _ from "lodash";
 
 class HomeController {
 
-	constructor( $window, $location, $translate, $log, apiProvider ) {
+	constructor( $window, $location, $translate, $log, apiProvider, GoogleMapApi ) {
 
 		let vm = this;
 
@@ -19,17 +19,41 @@ class HomeController {
 		vm.apiProvider = apiProvider;
 		vm.items = [];
 
-		vm.lng = -3.712191999999959;
-		vm.lat = 40.4777782;
+		vm.longitude = -3.712191999999959;
+		vm.latitude = 40.4777782;
 		vm.distance = 100;
-		vm.url = "ymedlop-db-memory-rest.bbva-sandbox.svc";
+		vm.url = "http://172.17.0.1:5000";
+
+		vm.map = {
+			control: {},
+			center: {
+				latitude: 40.475129700000004,
+				longitude: -3.5788542999999997,
+				zoom: 8
+			},
+			options: {
+				streetViewControl: false,
+				panControl: false,
+				maxZoom: 20,
+				minZoom: 3
+			},
+			zoom: 8,
+			dragging: false,
+			bounds: {}
+		};
+
+		GoogleMapApi.then(function(maps) {
+
+			maps.visualRefresh = true;
+
+		});
 	}
 
 	get() {
 
 		let vm = this;
 
-		vm.apiProvider.getNear(vm.lng, vm.lat, vm.distance, vm.url)
+		vm.apiProvider.getNear(vm.longitude, vm.latitude, vm.distance, vm.url)
 			.then(
 				( data )=> {
 					vm.items = data.list;
@@ -41,7 +65,7 @@ class HomeController {
 	}
 }
 
-HomeController.$inject = [ "$window", "$location", "$translate", "$log", "apiProvider"];
+HomeController.$inject = [ "$window", "$location", "$translate", "$log", "apiProvider", "uiGmapGoogleMapApi"];
 
 angular
 	.module( appValues.appName )

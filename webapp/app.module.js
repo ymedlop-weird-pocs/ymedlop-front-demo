@@ -1,5 +1,7 @@
 import angular from "angular";
 import "angular-moment";
+import 'angular-simple-logger';
+import 'angular-google-maps';
 import ngRoute from "angular-route";
 import ngElastic from "angular-elastic";
 import uiBootstrap from "angular-ui-bootstrap";
@@ -15,7 +17,9 @@ import appValues from "./configuration/app.values.js";
 
 angular.module( appValues.appName, [
 		ngAnimate,
+		"nemLogging",
 		"angularMoment",
+		"uiGmapgoogle-maps",
 		ngRoute,
 		"route-segment",
 		"view-segment",
