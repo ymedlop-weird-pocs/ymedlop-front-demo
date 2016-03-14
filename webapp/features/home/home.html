@@ -44,7 +44,7 @@
 							fit="true"
 					>
                         <ui-gmap-windows show="'show'">
-                            <div ng-non-bindable>{{address}}</div>
+                            <div ng-non-bindable>BBVA {{address}}</div>
                         </ui-gmap-windows>
 
 					</ui-gmap-markers>
@@ -57,32 +57,20 @@
 		<uib-tab index="1" heading="Listado">
 
 			<div class='search-result-titles col-md-12'>
-				<p class='col-md-3'>
+				<p class='col-md-6'>
 					ID
 				</p>
-				<p class='col-md-5'>
+				<p class='col-md-6'>
 					Address
-				</p>
-				<p class='col-md-1'>
-					Latitude
-				</p>
-				<p class='col-md-1'>
-					Longitude
 				</p>
 			</div>
 
 			<div class='search-result-row col-md-12' ng-repeat='(key, value) in home.items track by $index'>
-				<p class='col-md-4'>
+				<p class='col-md-6'>
 					{{ value.desc }}
 				</p>
-				<p class='col-md-5'>
+				<p class='col-md-6'>
 					{{ value.address }}
-				</p>
-				<p class='col-md-1'>
-					{{ value.lat }}
-				</p>
-				<p class='col-md-1'>
-					{{ value.lng }}
 				</p>
 			</div>
 
